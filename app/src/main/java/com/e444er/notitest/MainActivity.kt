@@ -54,24 +54,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getToken() {
-        lifecycleScope.launch {
-            val token = getTokenSuspend()
-            Log.d("Token", "Tokennn:$token")
-        }
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                val token = task.result
+
+                Log.d("Token","tokennn:$token")
+            }
     }
 
-    private suspend fun getTokenSuspend(): String? = suspendCoroutine { cont ->
-        FirebaseMessaging.getInstance().token
-            .addOnSuccessListener {token ->
-                cont.resume(token)
-            }
-            .addOnFailureListener {
-                cont.resume(null)
-            }
-            .addOnFailureListener {
-                cont.resume(null)
-            }
-    }
 
     private fun createProgress() {
         val notificationBuilder =
@@ -88,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                     notificationBuilder
                         .setProgress(maxProgress, progress, false)
                         .build()
-
 
                 if (ActivityCompat.checkSelfPermission(
                         this@MainActivity,
