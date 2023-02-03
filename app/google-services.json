@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "596922784437",
+    "project_id": "noti-14829",
+    "storage_bucket": "noti-14829.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596922784437:android:f3dc3107912ed35d5c7cfc",
+        "android_client_info": {
+          "package_name": "com.e444er.notitest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596922784437-2hu1a2at1e691570hnif3nujj6p3mnmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmBExIYjbo9o2BqNmcm7VCjM1rL4mhA64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596922784437-2hu1a2at1e691570hnif3nujj6p3mnmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
